@@ -1,0 +1,110 @@
+ /* Estilos para a seção de vídeos */
+ #videos {
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.video-container iframe {
+    width: 100%;
+    max-width: 800px; /* Ajuste a largura máxima do vídeo conforme sua necessidade */
+    height: 400px; /* Ajuste a altura do vídeo conforme sua necessidade */
+    border: none;
+    border-radius: 8px;
+}
+
+
+/* Estilização para o carrossel */
+.video-slider {
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+}
+
+.video-card {
+    flex: 0 0 100%;
+    padding: 0 10px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.prev-btn,
+.next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+/* Ajustes para telas menores */
+@media screen and (max-width: 768px) {
+    .video-container iframe {
+        max-width: 100%;
+        height: 250px;
+    }
+
+    .video-slider {
+        max-width: 100%;
+    }
+
+    .video-card {
+        flex: 0 0 50%;
+        padding: 0 5px;
+    }
+}
+
+/* Ajustes para telas ainda menores */
+@media screen and (max-width: 480px) {
+    .video-container iframe {
+        max-width: 100%;
+        height: 180px;
+    }
+
+    .video-slider {
+        max-width: 100%;
+    }
+
+    .video-card {
+        flex: 0 0 100%;
+        padding: 0 5px;
+    }
+}

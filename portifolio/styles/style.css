@@ -1,0 +1,315 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: black;
+    
+}
+
+
+a {
+    color:#fff ;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #3498db;
+    padding: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+}
+
+.profile-image img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 2px solid #fff;
+    transition: transform 0.3s ease;
+}
+.profile-image img:hover {
+    transform: scale(1.1); /* Aumenta o tamanho da imagem em 10% */
+}
+
+
+.profile-name {
+    font-size: 24px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    font-size: 1vw;
+    text-transform: uppercase;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    padding: 20px;
+}
+
+#central {
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+/* Redes Sociais */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 40px;
+    text-decoration: none;
+    
+    transition: transform 0.3s ease;
+}
+
+/* Estilos personalizados para cada ícone */
+.facebook-icon i {
+    color: #3b5998; /* Azul do Facebook */
+}
+
+.instagram-icon i {
+    color: #e4405f; /* Rosa do Instagram */
+}
+
+.linkedin-icon i {
+    color: #0077b5; /* Azul do LinkedIn */
+}
+
+.github-icon i {
+    color: #4078c0; /* Azul do GitHub */
+}
+
+.whatsapp-icon i {
+    color: #25d366; /* Verde do WhatsApp */
+}
+
+/* Estilos ao passar o mouse */
+i{
+    
+    transition: transform 0.3s ease;
+}
+i:hover{
+    transform: scale(2.1);
+}
+
+/* Tecnologias */
+.technologies {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Projetos */
+section {
+    width: 50%;
+    margin-bottom: 40px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 5, 0.1);
+}
+
+h2 {
+    color: #3498db;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+/* Rodapé */
+footer {
+    background-color: #3498db;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo para o gráfico de linguagens mais usadas */
+.chart-container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 20px;
+}
+
+/* Estilo para o título das seções */
+.section-title {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #3498db;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.section-title::before,
+.section-title::after {
+    font-size: 36px;
+    margin-right: 10px;
+}
+
+.section-content {
+    font-size: 18px;
+    line-height: 1.6;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+.emoji {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+
+
+img{
+    margin: 10px;
+}
+
+.toggle-nav-btn{
+    display: none;
+}
+  
+
+/* Estilo para o botão de três pontos em telas menores */
+@media screen and (max-width: 768px) {
+    .toggle-nav-btn {
+        display: block;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 24px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    #main-nav {
+        display: none;
+    }
+
+    #main-nav.active {
+        display: block;
+        
+    }
+}
+
+
+
+
+  /* Estilo responsivo */
+
+/* Aumenta o tamanho da imagem do perfil em telas maiores */
+@media screen and (min-width: 768px) {
+    .profile-image img {
+      width: 120px;
+      height: 120px;
+    }
+  }
+  
+  /* Ajusta o tamanho da fonte do nome do perfil em telas menores */
+  @media screen and (max-width: 768px) {
+    .profile-name {
+      font-size: 20px;
+    }
+  }
+  
+  /* Ajusta o layout das seções em telas menores */
+  @media screen and (max-width: 768px) {
+    section {
+      width: 90%;
+    }
+  }
+  
+  /* Ajusta o tamanho dos ícones sociais em telas menores */
+  @media screen and (max-width: 480px) {
+    .social-icons a {
+      font-size: 30px;
+    }
+  }
+  
+  /* Ajusta o tamanho dos ícones de habilidades em telas menores */
+  @media screen and (max-width: 480px) {
+    i {
+      font-size: 30px;
+    }
+  }
+  
+  /* Ajusta o tamanho do gráfico de linguagens em telas menores */
+  @media screen and (max-width: 768px) {
+    .chart-container {
+      max-width: 100%;
+    }
+  }
+  
+  /* Ajusta o tamanho do título das seções em telas menores */
+  @media screen and (max-width: 480px) {
+    .section-title {
+      font-size: 24px;
+    }
+  
+    .section-title::before,
+    .section-title::after {
+      font-size: 30px;
+    }
+  }
+  
+  /* Ajusta o tamanho do conteúdo das seções em telas menores */
+  @media screen and (max-width: 480px) {
+    .section-content {
+      font-size: 16px;
+    }
+  }
+  
+

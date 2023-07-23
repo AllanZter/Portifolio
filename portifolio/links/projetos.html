@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Allan Carvalho Souza - Portfólio</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/video.css">
+    <link rel="stylesheet" href="../styles/snake.css">
+    <link rel="stylesheet" href="../styles/calculadora.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>   
+
+           
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../scripts/snake.js"></script>
+    <script src="../scripts/calculadora.js"></script>
+
+
+    <style>
+        /* Estilos para o texto dentro da seção */
+        #section1 .section-title {
+            color: #0066cc;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        #section1 .section-content {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        #section1 .emoji {
+            font-size: 24px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        #section1 .rocket-icon {
+            font-size: 28px;
+            color: #ff9900;
+            vertical-align: middle;
+        }
+        .bn{
+            color:black;
+        }
+       
+    </style>
+
+    
+   
+</head>
+<body>    
+    <header>
+        <div class="profile-info">
+            <div class="profile-image">
+                <img src="../img/Allanz.png" alt="Foto do Allan Carvalho Souza">
+            </div>
+            <div class="profile-name">Allan</div>
+        </div>
+        <button id="toggle-nav-btn" class="toggle-nav-btn"><i class="fas fa-bars"></i></button>
+        <nav id="main-nav">
+            <ul>
+                <li><a href="../index.html"><i class="fas fa-home"></i> Home</a></li>
+                <li><a href="../links/curriculo.html"><i class="fas fa-user"></i> Sobre mim</a></li>
+                <li><a href="../links/projetos.html"><i class="fas fa-folder-open"></i> Meus projetos</a></li>
+                <li><a href="#calculadora"><i class="fas fa-calculator"></i> Calculadora</a></li>
+                <li><a href="#redes"><i class="fas fa-share-alt"></i> Redes Sociais</a></li>
+                <li><a href="#Cobra"><i class="fas fa-gamepad"></i>Snake</a></li>
+                <li><a href="#bonus"><i class="fas fa-gift"></i> Bônus</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <section id="section1">
+            <h2 class="section-title">O Jogo da Snake em javascript</h2>
+            <div class="section-content">
+                <p><span class="emoji">👋</span> O jogo Snake 🐍 é um dos clássicos mais 
+                    populares em jogos eletrônicos, e essa versão em JavaScript busca trazer a 
+                    nostalgia do passado com uma experiência moderna e interativa. A mecânica 
+                    simples e viciante torna o
+                     jogo atraente para jogadores de todas as idades, sendo uma 
+                     excelente opção para passar o tempo e se divertir. 😄🎮 <span class="rocket-icon">🚀</span></p>
+            </div>
+        </section>
+    
+
+        <section id="cobra">
+            <h2 class="section-title">Snake Game 🐍</h2>
+            <div class="section-content">
+                <div id="pontos">
+                    <h1 id="score"></h1>
+                </div>
+                <div id="tela">
+                    <h1>Snake Game</h1>
+                    <canvas id="stage" width="400" height="400"></canvas>
+                </div>
+                <div id="botoes">
+                    <button id="pauseBtn">Pause</button>
+                    <button id="restartBtn" disabled>Restart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="section1">
+            <h2 class="section-title">Calculadora Javascript</h2>
+            <div class="section-content">
+                <p><span class="emoji">👋</span> 🧮 A Calculadora em JavaScript é uma aplicação interativa 
+                    que permite realizar operações matemáticas simples de forma rápida e eficiente. Com uma
+                     interface moderna e amigável, os usuários podem realizar adições ➕, subtrações ➖, 
+                     multiplicações ✖️ e divisões ➗ com facilidade. Uma ferramenta prática para 
+                    praticar conceitos de programação em JavaScript, como manipulação do DOM e tratamento 
+                    de eventos. 💻✨ <span class="rocket-icon">🚀</span></p>
+            </div>
+        </section>
+
+        
+     
+
+        <section id="calculadora">
+            <div class="calculadora">
+                <h1>Calculadora</h1>
+                <p id="resultado"></p>
+                <table>
+                    <tr>
+                        <td><button class="botao" onclick="clean()">C</button></td>
+                        <td><button class="botao" onclick="back()"><</button></td>
+                        <td><button class="botao" onclick="insert('/')">/</button></td>
+                        <td><button class="botao" onclick="insert('*')">X</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('7')">7</button></td>
+                        <td><button class="botao" onclick="insert('8')">8</button></td>
+                        <td><button class="botao" onclick="insert('9')">9</button></td>
+                        <td><button class="botao" onclick="insert('-')">-</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('4')">4</button></td>
+                        <td><button class="botao" onclick="insert('5')">5</button></td>
+                        <td><button class="botao" onclick="insert('6')">6</button></td>
+                        <td><button class="botao" onclick="insert('+')">+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button class="botao" onclick="insert('1')">1</button></td>
+                        <td><button class="botao" onclick="insert('2')">2</button></td>
+                        <td><button class="botao" onclick="insert('3')">3</button></td>
+                        <td rowspan="2"><button class="botao" style="height: 106px;" onclick="calcular()">=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button class="botao" style="width: 106px;" onclick="insert('0')">0</button></td>
+                        <td><button class="botao" onclick="insert('.')">.</button></td>
+                    </tr>
+                </table>
+    
+                
+            </div>
+        </section>
+
+        <section id="bonus">
+            <h2 class="section-title">Bônus - Meus Projetos no GitHub</h2>
+            <ul class="bn">
+                <li ><a class="bn" href="https://github.com/AllanZter/Digital_clock_Python.git" target="_blank">Digital_clock_Python</a></li>
+                <li ><a class="bn" href="https://github.com/AllanZter/paint_javascript.git" target="_blank">paint_javascript</a></li>
+                <li ><a class="bn" href="https://github.com/AllanZter/projeto_java.git" target="_blank">projeto_java</a></li>
+                <li ><a class="bn" href="https://github.com/AllanZter/Calculadora-javascript.git" target="_blank">Calculadora-javascript</a></li>
+            </ul>
+        </section>
+
+        <section id="redes">
+            <h2 class="section-title">Redes Sociais</h2>
+            <div class="social-icons">
+                
+                <a href="https://www.facebook.com/" target="_blank" class="facebook-icon"><i class="fab fa-facebook-square"></i></a> 
+                <a href="https://www.instagram.com/allan_zter/" target="_blank" class="instagram-icon"><i class="fab fa-instagram"></i></a> 
+                <a href="https://www.linkedin.com/in/allan-carvalho-souza-64ba69264" target="_blank" class="linkedin-icon"><i class="fab fa-linkedin"></i></a> 
+                <a href="https://github.com/SeuUsuario" target="_blank" class="github-icon"><i class="fab fa-github"></i></a> 
+                <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank" class="whatsapp-icon"><i class="fab fa-whatsapp"></i></a> 
+            </div>
+        </section>        
+    </main>          
+          
+
+</body>
+</html>
