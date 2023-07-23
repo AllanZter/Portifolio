@@ -1,5 +1,4 @@
-  /* Estilos para a calculadora */
-  .calculadora {
+.calculadora {
     max-width: 400px;
     margin: 0 auto;
     padding: 20px;
@@ -23,13 +22,13 @@ table {
 
 td {
     text-align: center;
-    padding: 10px;
+    padding: 20px; /* Reduza o espaçamento interno dos botões */
 }
 
 .botao {
-    width: 50px;
-    height: 50px;
-    font-size: 18px;
+    width: 40px; /* Reduza o tamanho dos botões */
+    height: 40px;
+    font-size: 14px; /* Reduza o tamanho da fonte dos botões */
     color: #000;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -52,3 +51,33 @@ td {
     border-radius: 5px;
     background-color: #fff;
 }
+
+/* Estilos responsivos para telas menores que 768 pixels */
+@media (max-width: 768px) {
+    .calculadora {
+        max-width: 300px; /* Reduza a largura máxima para telas menores */
+        padding: 0px;
+    }
+
+    .calculadora h1 {
+        font-size: 20px; /* Reduza o tamanho da fonte do título */
+    }
+
+    .botao {
+        width: 25px; /* Reduza ainda mais o tamanho dos botões */
+        height: 25px;
+        font-size: 10px; /* Reduza ainda mais o tamanho da fonte dos botões */
+    }
+
+    #resultado {
+        font-size: 24px; /* Reduza o tamanho da fonte do resultado */
+        margin: 10px;
+    }
+    td {
+        text-align: center;
+        padding: 0px; /* Reduza o espaçamento interno dos botões */
+       
+    }
+   
+}
+

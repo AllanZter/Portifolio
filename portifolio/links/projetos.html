@@ -181,7 +181,19 @@
                 <a href="https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE" target="_blank" class="whatsapp-icon"><i class="fab fa-whatsapp"></i></a> 
             </div>
         </section>        
-    </main>          
+    </main>
+    <script>
+        // Obtém o botão e o menu de navegação pelo ID
+        const toggleNavBtn = document.getElementById('toggle-nav-btn');
+        const mainNav = document.getElementById('main-nav');
+    
+        // Adiciona um evento de clique ao botão
+        toggleNavBtn.addEventListener('click', function () {
+            // Alterna a classe 'active' no menu de navegação
+            mainNav.classList.toggle('active');
+        });
+    </script>                       
+              
           
 
 </body>

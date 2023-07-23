@@ -240,9 +240,21 @@ img{
     }
 
     #main-nav.active {
-        display: block;
+        display: flex;
         
     }
+    nav ul {
+       display: flex;
+       flex-direction: row-reverse;
+       padding: 0px;
+       margin: 0px;
+        
+    }
+    .profile-name {
+    display: none;
+    }
+    
+  
 }
 
 
@@ -289,8 +301,13 @@ img{
   /* Ajusta o tamanho do gráfico de linguagens em telas menores */
   @media screen and (max-width: 768px) {
     .chart-container {
-      max-width: 100%;
+        display: none;
+      
     }
+    #linguagens-mais-usadas{
+        display: none;
+    }
+   
   }
   
   /* Ajusta o tamanho do título das seções em telas menores */
