@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     nextBtn.addEventListener("click", function() {
         slideIndex++;
-        if (slideIndex >= slides.children.length) {
+        if (slideIndex >= slides.children.length) { 
             slideIndex = 0;
         }
         updateSlidePosition();

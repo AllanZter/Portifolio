@@ -22,5 +22,5 @@ function insert(num)
             else
             {
                 document.getElementById('resultado').innerHTML = "Nada..."
-            }
+            } 
         }

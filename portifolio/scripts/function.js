@@ -14,7 +14,7 @@ mainNav.classList.toggle('active');
 
         
     // Criação do header
-const header = createElementWithAttributes('header', {});
+const header = createElementWithAttributes('header', {}); 
 
 // Div profile-info
 const profileInfoDiv = createElementWithAttributes('div', { class: 'profile-info' });

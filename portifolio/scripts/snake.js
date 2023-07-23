@@ -21,7 +21,7 @@ let vx, vy, px, py, tam, qt, ax, ay, score, trail, tail, ctx, vel;
 
 function startGame() {
     const stage = document.getElementById('stage');
-    ctx = stage.getContext("2d");
+    ctx = stage.getContext("2d"); 
     stage.addEventListener("click", togglePause);
     
     vel = 1; // velocidade
