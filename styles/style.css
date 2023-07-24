@@ -243,15 +243,12 @@ img{
         display: flex;
         
     }
-    nav ul {
-       display: flex;
-       flex-direction: row-reverse;
-       padding: 0px;
-       margin: 0px;
-        
-    }
+ 
     .profile-name {
     display: none;
+    }
+    .none{
+        display: none;
     }
     
   

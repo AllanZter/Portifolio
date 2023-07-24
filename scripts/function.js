@@ -57,6 +57,10 @@ const menuLinks = [
 menuLinks.forEach(link => {
     const listItem = createElementWithAttributes('li', {});
     const linkItem = createElementWithAttributes('a', { href: link.href });
+     // Adicionando um identificador único para os links que deseja ocultar em telas menores
+     if (link.text === 'Vídeos' || link.text === 'Redes Sociais' || link.text === 'Tecnologias' || link.text === 'Linguagens mais usadas') {
+        listItem.classList.add('none');
+    }
     linkItem.innerHTML = `<i class="${link.icon}"></i> ${link.text}`;
     listItem.appendChild(linkItem);
     navList.appendChild(listItem);
@@ -205,7 +209,7 @@ const socialMediaLinks = [
 { href: 'https://www.instagram.com/allan_zter/', iconClass: 'instagram-icon', icon: 'fab fa-instagram' },
 { href: 'https://www.linkedin.com/in/allan-carvalho-souza-64ba69264', iconClass: 'linkedin-icon', icon: 'fab fa-linkedin' },
 { href: 'https://github.com/SeuUsuario', iconClass: 'github-icon', icon: 'fab fa-github' },
-{ href: 'https://api.whatsapp.com/send?phone=SEUNUMERODOTELEFONE', iconClass: 'whatsapp-icon', icon: 'fab fa-whatsapp' },
+{ href: 'https://api.whatsapp.com/send?phone=(11)345936782', iconClass: 'whatsapp-icon', icon: 'fab fa-whatsapp' },
 ];
 
 socialMediaLinks.forEach(link => {
